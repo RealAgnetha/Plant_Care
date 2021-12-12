@@ -29,4 +29,9 @@ public class Script_SceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("Errungenschaften");
     }
+
+    public void pflanzeHinzufügen()
+    {
+        SceneManager.LoadScene("PflanzeHinzufügen");
+    }
 }
