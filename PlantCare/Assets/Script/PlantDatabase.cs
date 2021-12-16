@@ -13,10 +13,10 @@ public class PlantDatabase : MonoBehaviour
     void Start()
     {
         //createDB and tables
-        CreateDB();
+        //CreateDB();
 
         //adds the plant with parameters everytime the skript is started 
-        AddPlant(
+        /*AddPlant(
             "Tomate",
             "Solanum lycopersicum",
             "Nach dem Guinness-Buch der Rekorde wurde die größte Tomate 1986 in Oklahoma mit einem Gewicht von 3,5 kg (7,7lbs) registriert. Aufgrund der großen Blattmasse haben Tomaten einen hohen Wasserbedarf, deshalb regelmäßig und ausreichend gießen. Eine gleichmäßige Wasserversorgung vermindert außerdem die Gefahr, dass die Früchte – von diesbezüglich empfindlichen Sorten – platzen. Tomatenpflanzen nie von oben beregnen, sondern das Gießwasser am Fuß der Pflanze ganz gezielt direkt auf den Boden ausbringen. Dazu eine Kanne ohne Gießbrause verwenden. Die Blätter müssen möglichst trocken bleiben, um eine Infektion mit Braunfäule (eine pilzliche Erkrankung, die zu großen Schäden bei Tomaten führen kann) zu verhindern bzw. zu erschweren.",
@@ -25,7 +25,7 @@ public class PlantDatabase : MonoBehaviour
             1,
             2,
             "drinnen"
-        );
+        );*/
         consoleLogPlants();
     }
 
