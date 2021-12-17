@@ -5,7 +5,7 @@ using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
 
-public class lookUpPlantInfoFromDB : MonoBehaviour
+public class PlantDatabase : MonoBehaviour
 {
     // name the db -> Plants
     // and set location of db
