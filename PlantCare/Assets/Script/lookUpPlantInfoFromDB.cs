@@ -5,7 +5,7 @@ using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
 
-public class PlantDatabase : MonoBehaviour
+public class lookUpPlantInfoFromDB : MonoBehaviour
 {
     // name the db -> Plants
     // and set location of db
@@ -27,7 +27,8 @@ public class PlantDatabase : MonoBehaviour
 
 
     public InputField iField;
-    public Text myText;
+    public Text infoText;
+    public Text latNameText;
 
     public void lookUpPlantByName(){
 
@@ -43,12 +44,14 @@ public class PlantDatabase : MonoBehaviour
             using (var command = connection.CreateCommand()){
                 
                 //get generalInfo
-                command.CommandText = "SELECT generalInfo FROM publicPlants WHERE name='" + userInput+ "';";
+                command.CommandText = "SELECT latName,generalInfo FROM publicPlants WHERE name='" + userInput+ "';";
                 
                 using (IDataReader reader = command.ExecuteReader()){
                     while (reader.Read()){
                         Debug.Log("generalInfo: "+ reader["generalInfo"]);
-                        myText.text="Tomate: "+ reader["generalInfo"];
+                        Debug.Log("latName: " + reader["latName"]);
+                        latNameText.text=""+reader["latName"];
+                        infoText.text="Kurzbeschreibung: "+reader["generalInfo"];
                     }
                     reader.Close();
                 }
