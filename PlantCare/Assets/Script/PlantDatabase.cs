@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Data;
 using Mono.Data.Sqlite;
+using UnityEngine.UI;
 
 public class PlantDatabase : MonoBehaviour
 {
     // name the db -> Plants
     // and set location of db
     private string dbName = "URI=file:Plants.db";
-
-    void Start()
-    {
         //createDB and tables
         //CreateDB();
 
@@ -26,7 +24,37 @@ public class PlantDatabase : MonoBehaviour
             2,
             "drinnen"
         );*/
-        consoleLogPlants();
+
+
+    public InputField iField;
+    public Text myText;
+
+    public void lookUpPlantByName(){
+
+        Debug.Log(iField.text);
+
+        string userInput=iField.text;
+
+                //create the db connection
+        using (var connection = new SqliteConnection(dbName)){
+            connection.Open();
+
+            // set up an object (called "command") to allow db control
+            using (var command = connection.CreateCommand()){
+                
+                //get generalInfo
+                command.CommandText = "SELECT generalInfo FROM publicPlants WHERE name='" + userInput+ "';";
+                
+                using (IDataReader reader = command.ExecuteReader()){
+                    while (reader.Read()){
+                        Debug.Log("generalInfo: "+ reader["generalInfo"]);
+                        myText.text="Tomate: "+ reader["generalInfo"];
+                    }
+                    reader.Close();
+                }
+            }
+            connection.Close();
+        }
     }
 
     public void CreateDB(){
