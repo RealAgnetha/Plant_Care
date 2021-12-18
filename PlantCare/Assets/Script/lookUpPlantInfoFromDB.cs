@@ -29,14 +29,27 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
     public InputField iField;
     public Text infoText;
     public Text latNameText;
+    public RawImage plantImage;
+    public Texture[] imageTextures = new Texture[3];
 
-    public void lookUpPlantByName(){
-
+    public void lookUpPlantByName(){        
         Debug.Log(iField.text);
 
+        //get use input plantname
         string userInput=iField.text;
+        
+        //look for plant image texture by plantname        
+        foreach (Texture x in imageTextures)
+         {
+             if (x.name.Equals(userInput))
+             {
+                plantImage.texture=x;
+                Debug.Log(x.name);
+             }
+         }
 
-                //create the db connection
+            
+        //create the db connection
         using (var connection = new SqliteConnection(dbName)){
             connection.Open();
 
