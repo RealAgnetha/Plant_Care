@@ -32,11 +32,11 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
     public RawImage plantImage;
     public Texture[] imageTextures = new Texture[3];
 
-    public void lookUpPlantByName(){        
+    public void lookUpPlantByName() {        
         Debug.Log(iField.text);
 
         //get use input plantname
-        string userInput=iField.text;
+        string userInput = iField.text;
         
         //look for plant image texture by plantname        
         foreach (Texture x in imageTextures)
@@ -50,21 +50,21 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
 
             
         //create the db connection
-        using (var connection = new SqliteConnection(dbName)){
+        using (var connection = new SqliteConnection(dbName)) {
             connection.Open();
 
             // set up an object (called "command") to allow db control
-            using (var command = connection.CreateCommand()){
+            using (var command = connection.CreateCommand()) {
                 
                 //get generalInfo
                 command.CommandText = "SELECT latName,generalInfo FROM publicPlants WHERE name='" + userInput+ "';";
                 
-                using (IDataReader reader = command.ExecuteReader()){
-                    while (reader.Read()){
-                        Debug.Log("generalInfo: "+ reader["generalInfo"]);
+                using (IDataReader reader = command.ExecuteReader()) {
+                    while (reader.Read()) {
+                        Debug.Log("generalInfo: " + reader["generalInfo"]);
                         Debug.Log("latName: " + reader["latName"]);
-                        latNameText.text=""+reader["latName"];
-                        infoText.text="Kurzbeschreibung: "+reader["generalInfo"];
+                        latNameText.text = "" + reader["latName"];
+                        infoText.text = "Kurzbeschreibung: " + reader["generalInfo"];
                     }
                     reader.Close();
                 }
@@ -73,46 +73,44 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
         }
     }
 
-    public void CreateDB(){
+    public void CreateDB() {
         //create the db connection
-        using (var connection = new SqliteConnection(dbName)){
+        using (var connection = new SqliteConnection(dbName)) {
             connection.Open();
 
             // set up an object (called "command") to allow db control
-            using (var command = connection.CreateCommand()){
+            using (var command = connection.CreateCommand()) {
                 //create a table called publicPlants, if it doesnt exist already
                 //it has  fields: name (up to 20 chars), latName, generalInfo, amountOfSunNeeded, difficultyLevel, pourFrequencyInDays, fertilizeFrequencyInWeeks, plantsOptimalLocation
                 command.CommandText = "CREATE TABLE IF NOT EXISTS publicPlants (name VARCHAR(20), latName VARCHAR(20), generalInfo TEXT, amountOfSunNeeded VARCHAR(20), difficultyLevel VARCHAR(20), pourFrequencyInDays INT, fertilizeFrequencyInWeeks INT,  plantsOptimalLocation VARCHAR(20));";
                 command.ExecuteNonQuery();
             }
-
             connection.Close();
         }
     }
 
-    public void DeleteTableIFExists(){
+    public void DeleteTableIFExists() {
         //create the db connection
-        using (var connection = new SqliteConnection(dbName)){
+        using (var connection = new SqliteConnection(dbName)) {
             connection.Open();
 
             // set up an object (called "command") to allow db control
-            using (var command = connection.CreateCommand()){
+            using (var command = connection.CreateCommand()) {
                 //create a table called publicPlants, if it doesnt exist already
                 //it has  fields: name (up to 20 chars), latName, generalInfo, amountOfSunNeeded, difficultyLevel, pourFrequencyInDays, fertilizeFrequencyInWeeks, plantsOptimalLocation
                 command.CommandText = "DROP TABLE IF EXISTS publicPlants;";
                 command.ExecuteNonQuery();
             }
-
             connection.Close();
         }
     }
 
-    public void AddPlant(string name, string latName, string generalInfo, string amountOfSunNeeded, string difficultyLevel, int pourFrequencyInDays, int fertilizeFrequencyInWeeks, string plantsOptimalLocation){
-        using (var connection = new SqliteConnection(dbName)){
+    public void AddPlant(string name, string latName, string generalInfo, string amountOfSunNeeded, string difficultyLevel, int pourFrequencyInDays, int fertilizeFrequencyInWeeks, string plantsOptimalLocation) {
+        using (var connection = new SqliteConnection(dbName)) {
             connection.Open();
 
             // set up an object (called "command") to allow db control
-            using (var command = connection.CreateCommand()){
+            using (var command = connection.CreateCommand()) {
                     //sql command for insertion
                 command.CommandText = "INSERT INTO publicPlants (name, latName, generalInfo, amountOfSunNeeded, difficultyLevel, pourFrequencyInDays, fertilizeFrequencyInWeeks, plantsOptimalLocation) VALUES ('" + name + "', '" + latName+ "', '" +generalInfo+ "', '" + amountOfSunNeeded+ "', '" + difficultyLevel+ "', '" + pourFrequencyInDays+ "', '" + fertilizeFrequencyInWeeks+ "', '" + plantsOptimalLocation+ "');";
                 command.ExecuteNonQuery(); //runs sql command
@@ -121,19 +119,19 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
         }
     }
 
-    public void consoleLogPlants(){
-        using (var connection = new  SqliteConnection(dbName)){
+    public void consoleLogPlants() {
+        using (var connection = new  SqliteConnection(dbName)) {
             connection.Open();
 
             //set up command obj
-            using (var command = connection.CreateCommand()){
+            using (var command = connection.CreateCommand()) {
                 //get everything from publicPlants table
                 command.CommandText = "SELECT * FROM publicPlants;";
 
                 //iterate through publicPlants
-                using (IDataReader reader = command.ExecuteReader()){
+                using (IDataReader reader = command.ExecuteReader()) {
                     while (reader.Read())
-                        Debug.Log("Name: "+ reader["name"]+ "\tlatName: "+ reader["latName"]+ "\tgeneralInfo: "+ reader["generalInfo"]+ "\tamountOfSunNeeded: "+ reader["amountOfSunNeeded"]+ "\tdifficultyLevel: "+ reader["difficultyLevel"]+ "\tpourFrequencyInDays: "+ reader["pourFrequencyInDays"]+ "\tfertilizeFrequencyInWeeks: "+ reader["fertilizeFrequencyInWeeks"]+ "\tplantsOptimalLocation: "+ reader["plantsOptimalLocation"]);
+                        Debug.Log("Name: " + reader["name"] + "\tlatName: " + reader["latName"] + "\tgeneralInfo: " + reader["generalInfo"] + "\tamountOfSunNeeded: " + reader["amountOfSunNeeded"] + "\tdifficultyLevel: " + reader["difficultyLevel"] + "\tpourFrequencyInDays: " + reader["pourFrequencyInDays"] + "\tfertilizeFrequencyInWeeks: " + reader["fertilizeFrequencyInWeeks"] + "\tplantsOptimalLocation: " + reader["plantsOptimalLocation"]);
                     reader.Close();
                 }
             }
