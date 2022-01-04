@@ -38,7 +38,7 @@ public class Script_Reminder : MonoBehaviour
             using (var command = connection.CreateCommand()){
                 
                 //get yearOfCreation, monthOfCreation, dayOfCreation and fertilizeFrequencyInWeeks, pourFrequencyInDays, name, nickname
-                command.CommandText = "SELECT yearOfCreation, monthOfCreation, dayOfCreation, fertilizeFrequencyInWeeks, pourFrequencyInDays, name, nickname FROM userPlants INNER JOIN publicPlants on publicPlants.latName = userPlants.latName where plantID=1;";
+                command.CommandText = "SELECT yearOfCreation, monthOfCreation, dayOfCreation, fertilizeFrequencyInWeeks, pourFrequencyInDays, name, nickname FROM userPlants INNER JOIN publicPlants on publicPlants.latName = userPlants.latName;";
                 
                 using (IDataReader reader = command.ExecuteReader()){
                     while (reader.Read()){
