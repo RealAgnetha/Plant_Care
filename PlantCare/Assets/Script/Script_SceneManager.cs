@@ -40,8 +40,13 @@ public class Script_SceneManager : MonoBehaviour
         SceneManager.LoadScene("Pflanzeninfos");
     }
 
-      public void einstellungen()
+    public void einstellungen()
     {
         SceneManager.LoadScene("Einstellungen");
+    }
+
+    public void infosGiessen()
+    {
+        SceneManager.LoadScene("InfosGiessen");
     }
 }

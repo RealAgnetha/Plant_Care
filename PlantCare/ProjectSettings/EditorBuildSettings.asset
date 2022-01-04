@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pflanzeninfos.unity
     guid: a178590b0e7984047952921ee433a22a
+  - enabled: 1
+    path: Assets/Scenes/InfosGiessen.unity
+    guid: e8dcd8f60238744439b19057dcd5402e
   m_configObjects: {}
