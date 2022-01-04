@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using System;
 
 public class createUserPlant : MonoBehaviour
 {
@@ -29,10 +30,17 @@ public class createUserPlant : MonoBehaviour
 
             // set up an object (called "command") to allow db control
             using (var command = connection.CreateCommand()){
-                Debug.Log(nicknameInputfield.text+ dropdownValue + latNameText.text);
+                //Get current date
+                DateTime thisDay = DateTime.Today;
+                int year = thisDay.Year;
+                int month = thisDay.Month;
+                int day = thisDay.Day;
+
                 //sql command for insertion
-                command.CommandText = "INSERT INTO userPlants (nickname, plantStage, latName) VALUES ('" + nicknameInputfield.text + "', '" + dropdownValue + "', '" +latNameText.text+ "');";
+                command.CommandText = "INSERT INTO userPlants (nickname, plantStage, latName, yearOfCreation, monthOfCreation, dayOfCreation) VALUES ('" + nicknameInputfield.text + "', '" + dropdownValue + "', '" +latNameText.text+ "', '" + year + "', '" + month + "', '" + day + "' );";
                 command.ExecuteNonQuery(); //runs sql command
+
+                Debug.Log("Pflanze hinzugefügt: "+ nicknameInputfield.text+ " " + dropdownValue + " " + latNameText.text+ " " +year+ " " +month+ " " +day);
             }
             connection.Close();
         }
