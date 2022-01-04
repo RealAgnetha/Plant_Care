@@ -30,8 +30,18 @@ public class Script_SceneManager : MonoBehaviour
         SceneManager.LoadScene("Errungenschaften");
     }
 
-    public void pflanzeHinzufügen()
+    public void pflanzeHinzufugen()
     {
-        SceneManager.LoadScene("PflanzeHinzufügen");
+        SceneManager.LoadScene("PflanzeHinzufuegen");
+    }
+
+    public void pflanzenInfos()
+    {
+        SceneManager.LoadScene("Pflanzeninfos");
+    }
+
+      public void einstellungen()
+    {
+        SceneManager.LoadScene("Einstellungen");
     }
 }
