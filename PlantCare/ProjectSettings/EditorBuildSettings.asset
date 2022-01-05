@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/AllgemeineTipps.unity
     guid: 936f2b0242f47384098cf99638def956
   - enabled: 1
-    path: "Assets/Scenes/PflanzeHinzuf\xFCgen.unity"
-    guid: fa0557315ba2f0c4aa95557129f8ceee
-  - enabled: 1
     path: Assets/Scenes/Pflanzenprofil.unity
     guid: 3774a19baf4b4f64a8067059b5f40da1
   - enabled: 1
