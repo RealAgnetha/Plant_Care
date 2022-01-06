@@ -9,6 +9,7 @@ public class meinePflanzen : MonoBehaviour
 {
     public GameObject meinePflanzenButtonPrefab;
     public GameObject mainPanel;
+    public Texture[] imageTextures = new Texture[3];
     private string dbName = "URI=file:Plants.db";
 
     void Start()
@@ -33,7 +34,6 @@ public class meinePflanzen : MonoBehaviour
                         Debug.Log("nickname: " + reader["nickname"]);
 
                         //create buttons for user plants with custom position
-                        //Button meinePflanzeButton = Instantiate(meinePflanzenButtonPrefab) as Button;
                         GameObject meinePflanzeButton = Instantiate(meinePflanzenButtonPrefab);
                         meinePflanzeButton.transform.parent = mainPanel.transform;
                         RectTransform rectTransform = meinePflanzeButton.GetComponent<RectTransform>();
@@ -41,12 +41,23 @@ public class meinePflanzen : MonoBehaviour
                         rectTransform.anchoredPosition = new Vector2(-85, myY);
                         myY=myY-(rectTransform.rect.height/3);
 
+                        //Buttons text field
                         TMPro.TextMeshProUGUI buttonText = meinePflanzeButton.GetComponentInChildren<TMPro.TextMeshProUGUI>();
                         buttonText.text=reader["name"]+"\n"+reader["nickname"];
 
+                        //look for plant image texture by plantname        
+                        foreach (Texture x in imageTextures)
+                        {
+                            if (x.name.Equals(reader["name"]))
+                            {
+                                meinePflanzeButton.GetComponentInChildren<RawImage>().texture=x;
+                                Debug.Log(x.name);
+                            }
+                        }
+
                         //set onlick
                         //var button = GetComponent<UnityEngine.UI.Button>();
-                        //button.onClick.AddListener(() => FooOnClick());
+                        meinePflanzeButton.GetComponent<Button>().onClick.AddListener(()=> MeinePflanzeButtonOnClick());
                     }
                     reader.Close();
                 }
@@ -55,8 +66,8 @@ public class meinePflanzen : MonoBehaviour
         }
     }
 
-    void FooOnClick()
+    void MeinePflanzeButtonOnClick()
     {
-        Debug.Log("Ta-Da!");
+        Debug.Log("Next Screen ->");
     }
 }
