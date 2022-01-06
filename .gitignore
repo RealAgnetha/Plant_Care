@@ -58,3 +58,7 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+PlantCare/Library/ArtifactDB
+PlantCare/Library/SceneVisibilityState.asset
+PlantCare/Library/SourceAssetDB
+PlantCare/Logs/shadercompiler-UnityShaderCompiler.exe0.log
