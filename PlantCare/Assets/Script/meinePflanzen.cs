@@ -4,14 +4,9 @@ using UnityEngine;
 
 public class meinePflanzen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject meinePflanzenButtonPrefab;
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
         
     }
