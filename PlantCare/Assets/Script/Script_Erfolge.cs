@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Script_Erfolge : MonoBehaviour
 {
@@ -13,16 +14,15 @@ public class Script_Erfolge : MonoBehaviour
     public GameObject erfBeschr;
 
     //Erster Erfolg Spezifisch
-    
-    public static int erf1Count;
-    public int erf1Trigger = 1;
-    public int erf1Code;
+    public static int erf1Count = 0;
+    public int erf1Trigger = 2;
+    public int erf1Code = 0;
 
     // Update is called once per frame
     void Update()
     {
         erf1Code = PlayerPrefs.GetInt("Erf1");
-        if(erf1Count == erf1Trigger && erf1Code != 12345)
+        if(erf1Count == erf1Trigger /*&& erf1Code != 12345*/)
         {
             StartCoroutine(Trigger01Erf());
         }
@@ -31,19 +31,19 @@ public class Script_Erfolge : MonoBehaviour
     IEnumerator Trigger01Erf()
     {
         erfActive = true;
+        erfNotif.SetActive(true);
         erf1Code = 12345;
         PlayerPrefs.SetInt("Erf1", erf1Code);
         erfBild.SetActive(true);
-        erfTitel.GetComponent<TextMesh>().text = "TEST!";
-        erfBeschr.GetComponent<TextMesh>().text = "This is a Test message";
-        erfNotif.SetActive(true);
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "TEST!";
+        erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
         yield return new WaitForSeconds(5);
 
         //Resetting UI
         erfNotif.SetActive(false);
         erfBild.SetActive(false);
-        erfTitel.GetComponent<TextMesh>().text = "";
-        erfBeschr.GetComponent<TextMesh>().text = "";
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "";
+        erfBeschr.GetComponent<TextMeshProUGUI>().text = "";
         erfActive = false;
     }
 }

@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Defines the logic behind a single achievement on the UI
 /// </summary>
 public class UIAchievement : MonoBehaviour
 {
-    public Text Title, Description, Percent;
+    public TextMeshPro Title, Description, Percent;
     public Image Icon, OverlayIcon, ProgressBar;
     public GameObject SpoilerOverlay;
     public Text SpoilerText;
