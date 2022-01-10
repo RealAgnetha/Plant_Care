@@ -49,4 +49,14 @@ public class Script_SceneManager : MonoBehaviour
     {
         SceneManager.LoadScene("InfosGiessen");
     }
+
+    public void infosUmtopfen()
+    {
+        SceneManager.LoadScene("InfosUmtopfen");
+    }
+
+    public void infosDuengen()
+    {
+        SceneManager.LoadScene("InfosDuengen");
+    }
 }
