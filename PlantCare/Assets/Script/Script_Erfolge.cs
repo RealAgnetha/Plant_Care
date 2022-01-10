@@ -28,6 +28,11 @@ public class Script_Erfolge : MonoBehaviour
         }
     }
 
+    public void trigger01Erf()
+    {
+        StartCoroutine(Trigger01Erf());
+    }
+
     IEnumerator Trigger01Erf()
     {
         erfActive = true;
@@ -35,7 +40,26 @@ public class Script_Erfolge : MonoBehaviour
         erf1Code = 12345;
         PlayerPrefs.SetInt("Erf1", erf1Code);
         erfBild.SetActive(true);
-        erfTitel.GetComponent<TextMeshProUGUI>().text = "TEST!";
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "Tomate Hinzugefügt!";
+        erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
+        yield return new WaitForSeconds(5);
+
+        //Resetting UI
+        erfNotif.SetActive(false);
+        erfBild.SetActive(false);
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "";
+        erfBeschr.GetComponent<TextMeshProUGUI>().text = "";
+        erfActive = false;
+    }
+
+    IEnumerator Trigger02Erf()
+    {
+        erfActive = true;
+        erfNotif.SetActive(true);
+        erf1Code = 12345;
+        PlayerPrefs.SetInt("Erf1", erf1Code);
+        erfBild.SetActive(true);
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "Pflanze Hinzugefügt!";
         erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
         yield return new WaitForSeconds(5);
 

@@ -5,14 +5,37 @@ using UnityEngine;
 public class Script_Unlock : MonoBehaviour
 {
     public GameObject LockScreen01;
+    public GameObject LockScreen02;
+    public GameObject LockScreen03;
+    public GameObject LockScreen04;
+    public GameObject LockScreen05;
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Script_Erfolge.erf1Code);
         if(Script_Erfolge.erf1Code != 0)
         {
             LockScreen01.SetActive(false);
         }
+
+        /*if (Script_Erfolge.erf2Code != 0)
+        {
+            LockScreen01.SetActive(false);
+        }
+
+        if (Script_Erfolge.erf3Code != 0)
+        {
+            LockScreen01.SetActive(false);
+        }
+
+        if (Script_Erfolge.erf4Code != 0)
+        {
+            LockScreen01.SetActive(false);
+        }
+
+        if (Script_Erfolge.erf5Code != 0)
+        {
+            LockScreen01.SetActive(false);
+        }*/
     }
 }

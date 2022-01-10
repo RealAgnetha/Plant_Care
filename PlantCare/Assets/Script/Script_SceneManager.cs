@@ -27,7 +27,7 @@ public class Script_SceneManager : MonoBehaviour
 
     public void errungenschaften()
     {
-        SceneManager.LoadScene("Errungenschaften");
+        SceneManager.LoadScene("Erfolge");
     }
 
     public void pflanzeHinzufugen()

@@ -19,8 +19,8 @@ public class Script_BtnAnim: MonoBehaviour
             }
         }
 
-        Debug.Log("Before: " + Script_Erfolge.erf1Count);
+        /*Debug.Log("Before: " + Script_Erfolge.erf1Count);
         Script_Erfolge.erf1Count += 1;
-        Debug.Log("After: " + Script_Erfolge.erf1Count);
+        Debug.Log("After: " + Script_Erfolge.erf1Count);*/
     }
 }
