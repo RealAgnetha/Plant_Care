@@ -14,7 +14,9 @@ public class findPlants : MonoBehaviour {
     public Transform difficultyDropdown;
  
     public void findPlant() {
- 
+        
+        Debug.Log("Suche gestartet");
+
         //checken was ausgewählt ist
         int indexLocation = locationDropdown.GetComponent<Dropdown>().value; //menuIndex
         int indexSun = sunDropdown.GetComponent<Dropdown>().value;
