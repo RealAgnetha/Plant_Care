@@ -6,6 +6,8 @@ using Mono.Data.Sqlite;
 using UnityEngine.UI;
 using System;
 
+/*NICHT FERTIG: Logikproblem bei der verschachtelten Anfrage, welche Angaben wichtiger sind als andere, z.B. viel Sonne+Profi, und dann alle schwierigkeiten für mittel und viel sonne.... */
+
 public class findPlants : MonoBehaviour {
 
     private string dbName = "URI=file:Plants.db";
@@ -46,8 +48,14 @@ public class findPlants : MonoBehaviour {
             connection.Open();
 
             using (var command = connection.CreateCommand()) {                
-                command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND amountOfSunNeeded = '" + sunValue + "' AND difficultyLevel = '" + difficultyValue + "';";
-
+                if (sunValue == "viel") {     
+                    command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND (amountOfSunNeeded = '" + "viel" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND difficultyLevel = '" + difficultyValue + "';";
+                } else if (sunValue == "wenig") {
+                    command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND (amountOfSunNeeded = '" + "wenig" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND difficultyLevel = '" + difficultyValue + "';";
+                } 
+                else {
+                    command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND amountOfSunNeeded = '" + sunValue + "' AND difficultyLevel = '" + difficultyValue + "';";
+                }
                 using (IDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {
                         Debug.Log("\nName: " + reader["name"]);

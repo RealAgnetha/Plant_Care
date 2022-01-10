@@ -582,7 +582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &146348898
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3643,6 +3643,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Name der Pflanze
 
+    Sonnenbedarf
+
     Schwierigkeitsgrad'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5394,7 +5396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1431933444
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7193,6 +7195,9 @@ MonoBehaviour:
   locationDropdown: {fileID: 899175047}
   sunDropdown: {fileID: 1431141318}
   difficultyDropdown: {fileID: 2124869609}
+  loading: {fileID: 146348897}
+  match: {fileID: 1085536345}
+  noMatch: {fileID: 1431933443}
 --- !u!1 &2093626665
 GameObject:
   m_ObjectHideFlags: 0
