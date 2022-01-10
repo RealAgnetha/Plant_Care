@@ -13,8 +13,19 @@ public class findPlants : MonoBehaviour {
     public Transform sunDropdown;
     public Transform difficultyDropdown;
  
+    public GameObject loading;
+    public GameObject match;
+    public GameObject noMatch;
+    private int checkMatch;
+
     public void findPlant() {
         
+        checkMatch = 0;
+        
+        loading.SetActive(true);
+        match.SetActive(false);
+        noMatch.SetActive(false);
+
         Debug.Log("Suche gestartet");
 
         //checken was ausgewählt ist
@@ -42,8 +53,20 @@ public class findPlants : MonoBehaviour {
                         Debug.Log("\nName: " + reader["name"]);
                         Debug.Log("\nBraucht " + reader["amountOfSunNeeded"] + " Sonne");
                         Debug.Log("\nSchwierigkeit: " + reader["difficultyLevel"]);
+                        checkMatch++;
                     }
                     reader.Close();
+
+                    if (checkMatch != 0) { 
+                        loading.SetActive(false);
+                        match.SetActive(true);
+                        noMatch.SetActive(false);
+                    } else {
+                        loading.SetActive(false);
+                        match.SetActive(false);
+                        noMatch.SetActive(true); 
+                    }
+                    
                 }
             }
             connection.Close();
