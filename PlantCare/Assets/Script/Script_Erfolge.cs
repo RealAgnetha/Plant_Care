@@ -16,8 +16,8 @@ public class Script_Erfolge : MonoBehaviour
     //Erster Erfolg Spezifisch
     public static int erf1Count = 0;
     public int erf1Trigger = 2;
-    public int erf1Code = 0;
-
+    public static int erf1Code = 0;
+    
     // Update is called once per frame
     void Update()
     {
