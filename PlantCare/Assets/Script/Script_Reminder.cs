@@ -137,56 +137,43 @@ public class Script_Reminder : MonoBehaviour
         switch (monthName){
             case "Januar":
             return 1;
-            break;
 
             case "Februar":
             return 2;
-            break;
 
             case "März":
             return 3;
-            break;
 
             case "April":
             return 4;
-            break;
             
             case "Mai":
             return 5;
-            break;
             
             case "Juni":
             return 6;
-            break;
 
             case "Juli":
             return 7;
-            break;
             
             case "August":
             return 8;
-            break;
             
             case "September":
             return 9;
-            break;
             
             case "Oktober":
             return 10;
-            break;
             
             case "November":
             return 11;
-            break;
             
             case "Dezember":
             return 12;
-            break;
             
             default:
             Debug.Log("Monat Falsch/nicht erkannt!");
             return 0;
-            break;
         }
     }
 }
