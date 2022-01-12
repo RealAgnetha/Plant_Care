@@ -10,6 +10,11 @@ public class Script_SceneManager : MonoBehaviour
         SceneManager.LoadScene("MeinePflanzen");
     }
 
+    public void pflanzenProfil()
+    {
+        SceneManager.LoadScene("Pflanzenprofil");
+    }
+
     public void pflanzeFinden()
     {
         SceneManager.LoadScene("PflanzeFinden");
