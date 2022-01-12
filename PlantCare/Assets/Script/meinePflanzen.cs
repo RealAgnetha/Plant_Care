@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Data;
 using Mono.Data.Sqlite;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class meinePflanzen : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class meinePflanzen : MonoBehaviour
                         Vector2 position = rectTransform.anchoredPosition;
                         rectTransform.anchoredPosition = new Vector2(-85, myY);
                         myY=myY-(rectTransform.rect.height/3);
+                        int plantID=reader.GetInt32(reader.GetOrdinal("plantID"));
 
                         //Buttons text field
                         TMPro.TextMeshProUGUI buttonText = meinePflanzeButton.GetComponentInChildren<TMPro.TextMeshProUGUI>();
@@ -51,8 +53,7 @@ public class meinePflanzen : MonoBehaviour
                         }
 
                         //set onlick
-                        //var button = GetComponent<UnityEngine.UI.Button>();
-                        meinePflanzeButton.GetComponent<Button>().onClick.AddListener(()=> MeinePflanzeButtonOnClick());
+                        meinePflanzeButton.GetComponent<Button>().onClick.AddListener(()=> MeinePflanzeButtonOnClick(plantID));
                     }
                     reader.Close();
                 }
@@ -61,8 +62,9 @@ public class meinePflanzen : MonoBehaviour
         }
     }
 
-    void MeinePflanzeButtonOnClick()
+    void MeinePflanzeButtonOnClick(int plantID)
     {
-        Debug.Log("Next Screen ->");
+        PlayerPrefs.SetInt("plantID", plantID);
+        SceneManager.LoadScene("Pflanzenprofil");
     }
 }
