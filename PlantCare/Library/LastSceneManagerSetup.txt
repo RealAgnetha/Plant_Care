@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/PflanzeHinzufuegen.unity
+- path: Assets/Scenes/MeinePflanzen.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

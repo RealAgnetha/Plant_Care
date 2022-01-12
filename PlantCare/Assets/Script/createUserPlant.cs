@@ -29,9 +29,6 @@ public class createUserPlant : MonoBehaviour
     public Text latNameText;
 
     public void addUsersPlant(){
- 
-        /*- Bedingung erfüllen, ob Pflanzenart vorhanden
-         *- Bei Erfolg statt Lat. namen, Normalen namen hinzufügen*/
 
      //get the selected index
          int menuIndex = plantStageDropdown.GetComponent<Dropdown> ().value;
@@ -75,12 +72,12 @@ public class createUserPlant : MonoBehaviour
                             command.ExecuteNonQuery(); //runs sql command
                             Debug.Log("Pflanze hinzugefügt: "+ nicknameInputfield.text+ " " + dropdownValue + " " + latNameText.text+ " " +year+ " " +month+ " " +day);
                             erf1drin = true;
+                            Script_Erfolge.erf1Count++;
                             SceneManager.LoadScene("MeinePflanzen");
 
                 }
             }
             connection.Close();
         }
-        Script_Erfolge.erf1Count++;
     }
 }

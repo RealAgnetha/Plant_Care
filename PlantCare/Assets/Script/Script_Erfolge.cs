@@ -41,8 +41,7 @@ public class Script_Erfolge : MonoBehaviour
         erf1Code = 12345;
         PlayerPrefs.SetInt("Erf1", erf1Code);
         erfBild.SetActive(true);
-        erfTitel.GetComponent<TextMeshProUGUI>().text = "Tomate Hinzugefügt!";
-        erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "Tomate Hinzugefï¿½gt!";
         yield return new WaitForSeconds(5);
 
         //Resetting UI
@@ -60,8 +59,7 @@ public class Script_Erfolge : MonoBehaviour
         erf1Code = 12345;
         PlayerPrefs.SetInt("Erf1", erf1Code);
         erfBild.SetActive(true);
-        erfTitel.GetComponent<TextMeshProUGUI>().text = "Pflanze Hinzugefügt!";
-        erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
+        erfTitel.GetComponent<TextMeshProUGUI>().text = "Pflanze Hinzugefï¿½gt!";
         yield return new WaitForSeconds(5);
 
         //Resetting UI
