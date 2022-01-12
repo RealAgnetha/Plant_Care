@@ -18,24 +18,25 @@ public class Script_Unlock : MonoBehaviour
             LockScreen01.SetActive(false);
         }
 
-        /*if (Script_Erfolge.erf2Code != 0)
+        Debug.Log(Script_Erfolge.erf2Code);
+        if (Script_Erfolge.erf2Code != 0)
         {
-            LockScreen01.SetActive(false);
+            LockScreen02.SetActive(false);
         }
 
         if (Script_Erfolge.erf3Code != 0)
         {
-            LockScreen01.SetActive(false);
+            LockScreen03.SetActive(false);
         }
 
         if (Script_Erfolge.erf4Code != 0)
         {
-            LockScreen01.SetActive(false);
+            LockScreen04.SetActive(false);
         }
 
         if (Script_Erfolge.erf5Code != 0)
         {
-            LockScreen01.SetActive(false);
-        }*/
+            LockScreen05.SetActive(false);
+        }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erfolg 01 Test
+  m_text: Zehn Pflanzen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -871,7 +871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Erfolg
+  m_text: "Zehn Pflanzen hinzugef\xFCgt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2090,7 +2090,7 @@ GameObject:
   - component: {fileID: 677186585}
   - component: {fileID: 677186584}
   m_Layer: 5
-  m_Name: Locked Aloe
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2357,7 +2357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erfolg 01 Test
+  m_text: Pflanze gerettet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2677,7 +2677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Erfolg
+  m_text: Eine Pflanze umgetopft
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2766,7 +2766,7 @@ GameObject:
   - component: {fileID: 916099026}
   - component: {fileID: 916099025}
   m_Layer: 5
-  m_Name: Locked Tomate
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2842,7 +2842,7 @@ GameObject:
   - component: {fileID: 953888495}
   - component: {fileID: 953888494}
   m_Layer: 5
-  m_Name: Locked Paprika
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3064,7 +3064,7 @@ GameObject:
   - component: {fileID: 999199697}
   - component: {fileID: 999199696}
   m_Layer: 5
-  m_Name: ErfolgPanel (Beispiel) (1)
+  m_Name: 2. Erfolg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3466,7 +3466,7 @@ GameObject:
   - component: {fileID: 1147715924}
   - component: {fileID: 1147715923}
   m_Layer: 5
-  m_Name: "Locked Kr\xE4uter"
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3587,7 +3587,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erfolg 01 Test
+  m_text: Pflanze umgetopft
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3867,6 +3867,10 @@ MonoBehaviour:
   erfTitel: {fileID: 423990964}
   erfBeschr: {fileID: 397790869}
   erf1Trigger: 1
+  erf2Trigger: 5
+  erf3Trigger: 10
+  erf4Trigger: 2
+  erf5Trigger: 2
 --- !u!4 &1300691933
 Transform:
   m_ObjectHideFlags: 0
@@ -4437,7 +4441,7 @@ GameObject:
   - component: {fileID: 1627502604}
   - component: {fileID: 1627502603}
   m_Layer: 5
-  m_Name: ErfolgPanel (Beispiel)
+  m_Name: 1. Erfolg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4561,7 +4565,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erfolg 01 Test
+  m_text: "F\xFCnf Pflanzen"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5073,7 +5077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Erfolg 01 Tomate
+  m_text: Erste Pflanze
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5207,7 +5211,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Erfolg
+  m_text: "F\xFCnf Pflanzen hinzugef\xFCgt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5341,7 +5345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Test Erfolg
+  m_text: Eine Pflanze gerettet
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5430,7 +5434,7 @@ GameObject:
   - component: {fileID: 1951839655}
   - component: {fileID: 1951839654}
   m_Layer: 5
-  m_Name: ErfolgPanel (Beispiel) (3)
+  m_Name: 4. Erfolg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5656,7 +5660,7 @@ GameObject:
   - component: {fileID: 2005863254}
   - component: {fileID: 2005863253}
   m_Layer: 5
-  m_Name: ErfolgPanel (Beispiel) (4)
+  m_Name: 5. Erfolg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5807,7 +5811,7 @@ GameObject:
   - component: {fileID: 2023517442}
   - component: {fileID: 2023517441}
   m_Layer: 5
-  m_Name: ErfolgPanel (Beispiel) (2)
+  m_Name: 3. Erfolg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5886,7 +5890,7 @@ GameObject:
   - component: {fileID: 2077494238}
   - component: {fileID: 2077494237}
   m_Layer: 5
-  m_Name: "Locked w\xE4ssern"
+  m_Name: Locked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6007,7 +6011,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Tomate hinzugef\xFCgt"
+  m_text: "Erfolgreich erste Pflanze hinzugef\xFCgt"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
