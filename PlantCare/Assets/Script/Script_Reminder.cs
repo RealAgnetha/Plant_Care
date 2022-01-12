@@ -15,7 +15,7 @@ public class Script_Reminder : MonoBehaviour
     public Text tagText;
     private string dbName = "URI=file:Plants.db";
 
-    private bool isActive1 = false;
+    //private bool isActive1 = false;
 
 
     //show reminder for the day clicked by user in kalender
