@@ -35,6 +35,7 @@ public class Script_Erfolge : MonoBehaviour
 
     IEnumerator Trigger01Erf()
     {
+        yield return new WaitForSeconds(2);
         erfActive = true;
         erfNotif.SetActive(true);
         erf1Code = 12345;
@@ -42,7 +43,7 @@ public class Script_Erfolge : MonoBehaviour
         erfBild.SetActive(true);
         erfTitel.GetComponent<TextMeshProUGUI>().text = "Tomate Hinzugefügt!";
         erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
-        yield return new WaitForSeconds(5);
+        
 
         //Resetting UI
         erfNotif.SetActive(false);

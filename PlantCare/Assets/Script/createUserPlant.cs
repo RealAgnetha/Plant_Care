@@ -95,6 +95,7 @@ public class createUserPlant : MonoBehaviour
     //Erfolg
     IEnumerator Trigger01Erf()
     {
+        yield return new WaitForSeconds(1);
         erfActive = true;
         erfNotif.SetActive(true);
         erf1Code = 12345;
