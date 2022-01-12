@@ -28,15 +28,6 @@ public class createUserPlant : MonoBehaviour
     public Transform plantStageDropdown;
     public Text latNameText;
 
-    void Update()
-    {
-        erf1Code = PlayerPrefs.GetInt("Erf1");
-        if (erf1Count == erf1Trigger || erf1drin/*&& erf1Code != 12345*/ )
-        {
-            StartCoroutine(Trigger01Erf());
-        }
-    }
-
     public void addUsersPlant(){
  
         /*- Bedingung erfüllen, ob Pflanzenart vorhanden
@@ -90,25 +81,6 @@ public class createUserPlant : MonoBehaviour
             }
             connection.Close();
         }
-    }
-
-    //Erfolg
-    IEnumerator Trigger01Erf()
-    {
-        yield return new WaitForSeconds(1);
-        erfActive = true;
-        erfNotif.SetActive(true);
-        erf1Code = 12345;
-        PlayerPrefs.SetInt("Erf1", erf1Code);
-        erfBild.SetActive(true);
-        erfTitel.GetComponent<TextMeshProUGUI>().text = latNameText.text + " hinzugefügt!";
-        yield return new WaitForSeconds(5);
-
-        //Resetting UI
-        erfNotif.SetActive(false);
-        erfBild.SetActive(false);
-        erfTitel.GetComponent<TextMeshProUGUI>().text = "";
-        erfBeschr.GetComponent<TextMeshProUGUI>().text = "";
-        erfActive = false;
+        Script_Erfolge.erf1Count++;
     }
 }

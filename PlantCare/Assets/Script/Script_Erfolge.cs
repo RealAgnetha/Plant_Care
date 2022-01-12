@@ -22,7 +22,7 @@ public class Script_Erfolge : MonoBehaviour
     void Update()
     {
         erf1Code = PlayerPrefs.GetInt("Erf1");
-        if(erf1Count == erf1Trigger /*&& erf1Code != 12345*/)
+        if(erf1Count == erf1Trigger && erf1Code != 12345)
         {
             StartCoroutine(Trigger01Erf());
         }
@@ -35,7 +35,7 @@ public class Script_Erfolge : MonoBehaviour
 
     IEnumerator Trigger01Erf()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         erfActive = true;
         erfNotif.SetActive(true);
         erf1Code = 12345;
@@ -43,7 +43,7 @@ public class Script_Erfolge : MonoBehaviour
         erfBild.SetActive(true);
         erfTitel.GetComponent<TextMeshProUGUI>().text = "Tomate Hinzugefügt!";
         erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
-        
+        yield return new WaitForSeconds(5);
 
         //Resetting UI
         erfNotif.SetActive(false);
