@@ -29,10 +29,6 @@ public class meinePflanzen : MonoBehaviour
 
                 using (IDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {
-                        Debug.Log("plantID: " + reader["plantID"]);
-                        Debug.Log("name: " + reader["name"]);
-                        Debug.Log("nickname: " + reader["nickname"]);
-
                         //create buttons for user plants with custom position
                         GameObject meinePflanzeButton = Instantiate(meinePflanzenButtonPrefab);
                         meinePflanzeButton.transform.parent = mainPanel.transform;
@@ -51,7 +47,6 @@ public class meinePflanzen : MonoBehaviour
                             if (x.name.Equals(reader["name"]))
                             {
                                 meinePflanzeButton.GetComponentInChildren<RawImage>().texture=x;
-                                Debug.Log(x.name);
                             }
                         }
 

@@ -6,6 +6,7 @@ using Mono.Data.Sqlite;
 using UnityEngine.UI;
 using System;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class createUserPlant : MonoBehaviour
 {
@@ -30,7 +31,6 @@ public class createUserPlant : MonoBehaviour
     void Update()
     {
         erf1Code = PlayerPrefs.GetInt("Erf1");
-        Debug.Log("Erf1drin: "+erf1drin);
         if (erf1Count == erf1Trigger || erf1drin/*&& erf1Code != 12345*/ )
         {
             StartCoroutine(Trigger01Erf());
@@ -62,15 +62,33 @@ public class createUserPlant : MonoBehaviour
                 int month = thisDay.Month;
                 int day = thisDay.Day;
 
-                //sql command for insertion
-                command.CommandText = "INSERT INTO userPlants (nickname, plantStage, latName, yearOfCreation, monthOfCreation, dayOfCreation) VALUES ('" + nicknameInputfield.text + "', '" + dropdownValue + "', '" +latNameText.text+ "', '" + year + "', '" + month + "', '" + day + "' );";
-                command.ExecuteNonQuery(); //runs sql command
+                //check if plant with given name exists
+                command.CommandText = "SELECT EXISTS(SELECT * FROM publicPlants WHERE latName='"+latNameText.text+"');";
+                
+                bool plantExists=false;
 
-                Debug.Log("Pflanze hinzugefügt: "+ nicknameInputfield.text+ " " + dropdownValue + " " + latNameText.text+ " " +year+ " " +month+ " " +day);
+                using (IDataReader reader = command.ExecuteReader()) {
+                    while (reader.Read()){
+                        if(reader.GetInt32(0)==1){
+                            plantExists=true;                
+                        }else{
+                            Debug.Log("Pflanzenart nicht bekannt!");
+                        }
+                    }
+                    reader.Close();
+                }
+                
+                if(plantExists==true){
+                                    //sql command for insertion
+                            command.CommandText = "INSERT INTO userPlants (nickname, plantStage, latName, yearOfCreation, monthOfCreation, dayOfCreation) VALUES ('" + nicknameInputfield.text + "', '" + dropdownValue + "', '" +latNameText.text+ "', '" + year + "', '" + month + "', '" + day + "' );";
+                            command.ExecuteNonQuery(); //runs sql command
+                            Debug.Log("Pflanze hinzugefügt: "+ nicknameInputfield.text+ " " + dropdownValue + " " + latNameText.text+ " " +year+ " " +month+ " " +day);
+                            erf1drin = true;
+                            SceneManager.LoadScene("MeinePflanzen");
+
+                }
             }
             connection.Close();
-            erf1drin = true;
-            Debug.Log("Test");
         }
     }
 
@@ -83,7 +101,6 @@ public class createUserPlant : MonoBehaviour
         PlayerPrefs.SetInt("Erf1", erf1Code);
         erfBild.SetActive(true);
         erfTitel.GetComponent<TextMeshProUGUI>().text = latNameText.text + " hinzugefügt!";
-        erfBeschr.GetComponent<TextMeshProUGUI>().text = "This is a Test message";
         yield return new WaitForSeconds(5);
 
         //Resetting UI

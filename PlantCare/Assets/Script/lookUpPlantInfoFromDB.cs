@@ -33,8 +33,6 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
     public Texture[] imageTextures = new Texture[3];
 
     public void lookUpPlantByName() {        
-        Debug.Log(iField.text);
-
         //get use input plantname
         string userInput = iField.text;
         
@@ -44,7 +42,6 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
              if (x.name.Equals(userInput))
              {
                 plantImage.texture=x;
-                Debug.Log(x.name);
              }
          }
 
@@ -61,8 +58,6 @@ public class lookUpPlantInfoFromDB : MonoBehaviour
                 
                 using (IDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {
-                        Debug.Log("generalInfo: " + reader["generalInfo"]);
-                        Debug.Log("latName: " + reader["latName"]);
                         latNameText.text = "" + reader["latName"];
                         infoText.text = "Kurzbeschreibung: " + reader["generalInfo"];
                     }
