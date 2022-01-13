@@ -14,7 +14,7 @@ public class Script_Erfolge : MonoBehaviour
     public GameObject erfBeschr;
 
     //Erster Erfolg Spezifisch (Eine Pflanze)
-    public static int erf1Count = 11;
+    public static int erf1Count = 0;
     public int erf1Trigger = 1;
     public static int erf1Code = 0;
 
