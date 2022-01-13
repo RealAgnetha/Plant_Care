@@ -49,7 +49,35 @@ public class findPlants : MonoBehaviour {
         using (var connection = new SqliteConnection(dbName)) {
             connection.Open();
 
-            using (var command = connection.CreateCommand()) {                
+            using (var command = connection.CreateCommand()) {     
+
+                if (difficultyValue == "ein Vollprofi") {
+                    if (sunValue == "viel") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "viel" + "' OR amountOfSunNeeded = '" + "mittel" + "');";
+                    } else if (sunValue == "wenig") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "wenig" + "' OR amountOfSunNeeded = '" + "mittel" + "');";
+                    } else {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "';";
+                    } 
+                } else if (difficultyValue == "eine Niete") {
+                     if (sunValue == "viel") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "viel" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND difficultyLevel = '" + "leicht" + "';";
+                    } else if (sunValue == "wenig") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "wenig" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND difficultyLevel = '" + "leicht" + "';";
+                    } else {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND difficultyLevel = '" + "leicht" + "';";
+                    } 
+                } else {
+                    if (sunValue == "viel") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "viel" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND (difficultyLevel = '" + "leicht"  + "' OR difficultyLevel = '" + "mittel" + "');";
+                    } else if (sunValue == "wenig") {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "' AND (amountOfSunNeeded = '" + "wenig" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND (difficultyLevel = '" + "leicht"  + "' OR difficultyLevel = '" + "mittel" + "');";
+                    } else {
+                        command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND (difficultyLevel = '" + "leicht"  + "' OR difficultyLevel = '" + "mittel" + "');";
+                    } 
+                }
+
+                /*
                 if (sunValue == "viel") {     
                     command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND (amountOfSunNeeded = '" + "viel" + "' OR amountOfSunNeeded = '" + "mittel" + "') AND difficultyLevel = '" + difficultyValue + "';";
                 } else if (sunValue == "wenig") {
@@ -58,6 +86,8 @@ public class findPlants : MonoBehaviour {
                 else {
                     command.CommandText = "SELECT name, amountOfSunNeeded, difficultyLevel FROM publicPlants WHERE plantsOptimalLocation = '" + locationValue + "'AND amountOfSunNeeded = '" + sunValue + "' AND difficultyLevel = '" + difficultyValue + "';";
                 }
+                */
+
                 using (IDataReader reader = command.ExecuteReader()) {
                     while (reader.Read()) {
                         Debug.Log("\nName: " + reader["name"]);
