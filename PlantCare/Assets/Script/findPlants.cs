@@ -18,13 +18,15 @@ public class findPlants : MonoBehaviour {
     public GameObject loading;
     public GameObject match;
     public GameObject noMatch;
+    public GameObject results;
     private int checkMatch;
 
     public void findPlant() {
         
         checkMatch = 0;
         
-        loading.SetActive(true);
+        results.SetActive(false);
+        //loading.SetActive(true);
         match.SetActive(false);
         noMatch.SetActive(false);
 
@@ -66,10 +68,12 @@ public class findPlants : MonoBehaviour {
                     reader.Close();
 
                     if (checkMatch != 0) { 
+                        results.SetActive(true);
                         loading.SetActive(false);
                         match.SetActive(true);
                         noMatch.SetActive(false);
                     } else {
+                        results.SetActive(true);
                         loading.SetActive(false);
                         match.SetActive(false);
                         noMatch.SetActive(true); 
