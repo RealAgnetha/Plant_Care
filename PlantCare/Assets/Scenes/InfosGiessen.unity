@@ -205,8 +205,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9717948}
   m_HandleRect: {fileID: 1771919236}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.46358848
+  m_Value: 0.9396233
+  m_Size: 0.19306022
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1387,8 +1387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000069135826, y: -314.852}
-  m_SizeDelta: {x: 282.0089, y: 1173.9194}
+  m_AnchoredPosition: {x: -0.0000069135826, y: -1000}
+  m_SizeDelta: {x: 282.0089, y: 2818.8896}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047005204
 MonoBehaviour:
@@ -1410,22 +1410,44 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nTipps zum Gie\xDFen\n\nLorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\nLorem ipsum dolor
-    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet."
+  m_text: "\n<b>Tipps zum Gie\xDFen</b>\n\nEs gibt leider keine allgemeing\xFCltige
+    Formel f\xFCr das Gie\xDFen - jede Pflanze ist anders und hat eigene spezielle
+    Bed\xFCrfnisse. Manche kommen mit Trockenheit gut zurecht, andere brauchen viel
+    Wasser, um zu wachsen und zu bl\xFChen. Auch das Wachstumsstadium der Pflanze,
+    die Jahreszeit, und die lokalen Klimabedingungen spielen eine Rolle. \r\n\r\nDie
+    meisten Nutzpflanzen sind absolut angewiesen auf eine regelm\xE4\xDFige und ausreichende
+    Wasserversorgung. Sie neigen sonst schnell zu Krankheiten und Sch\xE4dlingen,
+    oder gehen ein. Am liebsten haben sie es, so viel Wasser zu bekommen, wie sie
+    an ihrem Naturstandort auch bekommen w\xFCrden - bei Sukkulenten ist das zum
+    Beispiel ziemlich wenig. \r\n\r\nGenerell solltest du darauf achten, nicht von
+    oben herab auf die Pflanzen zu gie\xDFen, sondern den Boden durchzufeuchten,
+    damit das meiste Wasser an die Wurzeln kommt und die Bl\xE4tter und Fr\xFCchte
+    keine Sch\xE4den bekommen. Tomaten k\xF6nnen zum Beispiel aufplatzen, wenn die
+    Fr\xFCchte zu viel Wasser abbekommen! \r\n\r\nRegenwasser ist f\xFCr Pflanzen
+    besser als Leitungswasser \u2013 es ist kalkarm und hat den perfekten pH-Wert
+    f\xFCr sie. Wenn es geht, sammle Regenwasser in einem Gef\xE4\xDF und gie\xDFe
+    damit. \r\n\r\n<b>Zimmerpflanzen </b> \r\n\r\nEine gute Faustregel ist es, immer
+    dann zu gie\xDFen, wenn sich die Erde im Topf trocken anf\xFChlt. Die meisten
+    Pflanzen m\xF6gen es lieber, wenn du ein paar Mal pro Woche etwas mehr gie\xDFt,
+    als jeden Tag eine kleine Menge. Sie k\xF6nnen auch Wasserreserven aufbauen,
+    um mehrere Tage ohne neues Wasser zu \xFCberleben!  \r\n\r\nGie\xDFe aber auf
+    keinen Fall zu viel, davon k\xF6nnen die Wurzeln faulen und die Pflanze geht
+    ein \u2013 das ist schwerer grade zu biegen als eine eingetrocknete Pflanze! 
+    \r\n\r\nDie meisten Zimmerpflanzen \u201C\xFCberwintern\u201D, und brauchen dann
+    weniger Wasser. In ihren Bl\xFCtezeiten brauchen sie dann wieder mehr, um gut
+    wachsen zu k\xF6nnen. \r\n\r\n<b>Gartenpflanzen </b>\r\n\r\nBesonders im Sommer
+    brauchen deine Gartenpflanzen viel Wasser, da die Feuchtigkeit schneller verdunstet
+    und die Gefahr besteht, dass die Pflanzen verdursten. Gie\xDFe am besten am fr\xFChen
+    Morgen, wenn die Luft von der Nacht noch etwas feuchter ist und vielleicht sogar
+    noch Tau auf den Bl\xE4ttern liegt. Denk dran, direkt am Boden zu w\xE4ssern,
+    nicht die Bl\xE4tter, St\xE4ngel und Fr\xFCchte. \r\n\r\n<b>Was, wenn ich mal
+    nicht gie\xDFen kann? </b>\n\r\nWer ohne Gie\xDFvertretung in den Urlaub fahren
+    m\xF6chte, hat mehrere Optionen. Es gibt zum Beispiel Bew\xE4sserungskugeln zu
+    kaufen, die man mit Wasser f\xFCllt und in den Topf steckt. Das h\xE4lt dann
+    f\xFCr ein paar Tage. Sehr wasserbed\xFCrftige Pflanzen kann man f\xFCr einige
+    Tage in mit Wasser gef\xFCllte Untersetzer stellen. Stell deine Zimmerpflanzen
+    w\xE4hrend des Urlaubs aus der Sonne an schattigere Stellen, damit sie nicht
+    vertrocknen. "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2897,7 +2919,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 9717947}
