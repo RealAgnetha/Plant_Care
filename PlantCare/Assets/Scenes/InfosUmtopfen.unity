@@ -205,8 +205,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9717948}
   m_HandleRect: {fileID: 1771919236}
   m_Direction: 2
-  m_Value: 0.99999994
-  m_Size: 0.46358848
+  m_Value: 1
+  m_Size: 0.31455004
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1387,8 +1387,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000069135826, y: -314.852}
-  m_SizeDelta: {x: 282.0089, y: 1173.9194}
+  m_AnchoredPosition: {x: -0.0000069135826, y: -592.96216}
+  m_SizeDelta: {x: 282.0089, y: 1730.1396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1047005204
 MonoBehaviour:
@@ -1410,30 +1410,29 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-    Tipps zum Umtopfen
-
-
-    Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-
-    Lorem
-    ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-    invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
-    eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
-    sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-    consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-    Lorem ipsum dolor sit amet.'
+  m_text: "\n<b>Tipps zum Umtopfen</b>\n\nWenn deine Pflanze w\xE4chst, dann nicht
+    nur nach oben \u2013 auch das Wurzelwerk vermehrt sich und braucht ausreichend
+    Platz. Wenn der Topf zu klein f\xFCr die Wurzeln wird, w\xE4chst deine Pflanze
+    nicht mehr richtig weiter. Besonders im Laden gekaufte Pflanzen sollten so bald
+    wie m\xF6glich umgetopft werden, da sie aus Kostengr\xFCnden meist in zu kleinen
+    T\xF6pfen verkauft werden.  \r\n\nDas Umtopfen ist auch eine gute Gelegenheit,
+    um zu schauen, ob sich in den Wurzeln Sch\xE4dlinge eingenistet haben! \r\n\r\nJe
+    nach Wachstum der Pflanze solltest du alle ein bis drei Jahre umtopfen. Am besten
+    ist das Umtopfen vor Beginn einer Wachstumsperiode, was meistens im Fr\xFChjahr
+    ist, du kannst aber das ganze Jahr \xFCber Umtopfen.  \r\n\r\nDer neue Topf sollte
+    ca. 2-3 cm gr\xF6\xDFer sein als der Topf davor. \xC4ltere Pflanzen m\xFCssen
+    nicht so oft umgetopft werden \u2013 bei ihnen sollte der neue Topf ca. 5-6 cm
+    mehr im Umfang betragen.  \r\n\r\nDu kannst auf dem Boden des neuen Topfes Kies
+    oder Granulat verteilen, um zu verhindern, dass die Erde durchsickert oder sich
+    Wasser im Topf ansammelt, wodurch es zu Staun\xE4sse und Wurzelf\xE4ule kommen
+    kann.  \r\n\r\nWenn das Wurzelwerk deiner Pflanze im alten Topf sehr dicht gewachsen
+    ist, lockere sie vorsichtig auf, bevor du sie neu einpflanzt. Sollten Wurzeln
+    verfault oder vertrocknet sein, entferne sie \u2013 sie schaden deiner Pflanze
+    nur.  \r\n\r\nGib etwas Erde in den neuen Topf und stelle deine Pflanze hinein.
+    Achte darauf, dass sie gerade steht! Dann f\xFClle den Topf bis 2cm unter dem
+    Rand mit Erde auf.  \r\n\r\nEs empfieht sich, den Topf auf einen passenden Untersetzer
+    oder in einen \xDCbertopf zu stellen, um Staun\xE4sse durch \xFCberm\xE4\xDFiges
+    Gie\xDFen zu vermeiden.  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2905,7 +2904,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 9717947}
