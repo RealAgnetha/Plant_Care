@@ -1410,22 +1410,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nTipps zum D\xFCngen\n\nLorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-    Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-    amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet.\n\nLorem ipsum dolor
-    sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
-    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet."
+  m_text: "\n<b>Tipps zum D\xFCngen</b>\n\nD\xFCngen hilft deiner Pflanze, wichtige
+    N\xE4hrstoffe aufzunehmen. Du merkst, dass deine Pflanze einen N\xE4hrstoffmangel
+    hat, wenn sie sich trotz richtigem Gie\xDFen verf\xE4rbt, die Bl\xE4tter h\xE4ngen
+    l\xE4sst, nicht richtig w\xE4chst, oder anf\xE4lliger f\xFCr Sch\xE4dlinge ist.
+    Das passiert vor allem in den Wachstumsphasen deiner Pflanze, wenn sie sehr aktiv
+    ist und mehr N\xE4hrstoffe verarbeitet. \n\nAchte darauf, nicht zu viel zu d\xFCngen,
+    denn auch ein Zuviel an N\xE4hrstoffen kann deiner Pflanze schaden. Um \xDCberd\xFCngung
+    zu vermeiden, fange lieber mit einer geringeren Dosis an und schaue, wie es deiner
+    Pflanze damit geht.  \r\n\r\nPflanzen k\xF6nnen die N\xE4hrstoffe im D\xFCnger
+    nur aufnehmen, wenn sie im Wasser gel\xF6st sind. Gie\xDFe deine Pflanze also
+    vorher ordentlich, oder verwende Fl\xFCssigd\xFCnger. Den kannst du einfach in
+    das Gie\xDFwasser geben und damit w\xE4ssern.  \r\n\r\nEs gibt viele verschiedene
+    Arten von D\xFCngemitteln, die auf verschiedene Pflanzenarten und -familien abgestimmt
+    sind. Wenn du D\xFCnger im Fachgesch\xE4ft kaufst, achte auf die beigef\xFCgten
+    Anleitungen und Infos zur Dosierung.  \r\n\r\nOrganische D\xFCnger k\xF6nnen
+    zum Beispiel Kaffeesatz, Kompost, oder auch... abgeschnittene Fingern\xE4gel
+    sein.  "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2897,7 +2898,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 5
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 9717947}
