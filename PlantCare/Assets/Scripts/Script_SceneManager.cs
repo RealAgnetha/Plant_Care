@@ -30,6 +30,10 @@ public class Script_SceneManager : MonoBehaviour
         SceneManager.LoadScene("AllgemeineTipps");
     }
 
+    public void Hilfedialog(){
+        SceneManager.LoadScene("Hilfedialog");
+    }
+
     public void errungenschaften()
     {
         SceneManager.LoadScene("Erfolge");
