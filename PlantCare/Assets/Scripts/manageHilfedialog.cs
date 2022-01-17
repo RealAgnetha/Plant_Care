@@ -10,7 +10,6 @@ public class manageHilfedialog : MonoBehaviour
     public GameObject Fenster22;
     public GameObject Fenster23;
     public GameObject Fenster24;
-    public GameObject Popup;
 
     public void schwarzePunkte(){
         Fenster1.SetActive(false);
@@ -35,5 +34,10 @@ public class manageHilfedialog : MonoBehaviour
     public void manageBackButton(){
         if(Fenster1.active) SceneManager.LoadScene("Pflanzenprofil");
         if(Fenster21.active || Fenster22.active || Fenster23.active || Fenster24.active) SceneManager.LoadScene("Hilfedialog");
+    }
+
+    public void setHappySmileyAndReturnToProfile(){
+        PlayerPrefs.SetString("gesundheit", "gut");
+        SceneManager.LoadScene("Pflanzenprofil");
     }
 }

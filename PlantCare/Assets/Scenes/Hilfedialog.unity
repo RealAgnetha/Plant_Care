@@ -995,8 +995,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 429878368}
-        m_TargetAssemblyTypeName: Script_SceneManager, Assembly-CSharp
-        m_MethodName: pflanzenProfil
+        m_TargetAssemblyTypeName: manageHilfedialog, Assembly-CSharp
+        m_MethodName: setHappySmileyAndReturnToProfile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1053,9 +1053,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 429878363}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f624573e6a0bda845b1f1815b37b5bc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7998f05be3719f74a8a4c1c558ffafad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fenster1: {fileID: 0}
+  Fenster21: {fileID: 0}
+  Fenster22: {fileID: 0}
+  Fenster23: {fileID: 0}
+  Fenster24: {fileID: 0}
 --- !u!1 &484589208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1528,8 +1533,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620983756}
-        m_TargetAssemblyTypeName: Script_SceneManager, Assembly-CSharp
-        m_MethodName: pflanzenProfil
+        m_TargetAssemblyTypeName: manageHilfedialog, Assembly-CSharp
+        m_MethodName: setHappySmileyAndReturnToProfile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1586,9 +1591,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 620983751}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f624573e6a0bda845b1f1815b37b5bc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7998f05be3719f74a8a4c1c558ffafad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fenster1: {fileID: 0}
+  Fenster21: {fileID: 0}
+  Fenster22: {fileID: 0}
+  Fenster23: {fileID: 0}
+  Fenster24: {fileID: 0}
 --- !u!1 &635165157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1945,8 +1955,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 687418793}
-        m_TargetAssemblyTypeName: Script_SceneManager, Assembly-CSharp
-        m_MethodName: pflanzenProfil
+        m_TargetAssemblyTypeName: manageHilfedialog, Assembly-CSharp
+        m_MethodName: setHappySmileyAndReturnToProfile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2003,9 +2013,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 687418788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f624573e6a0bda845b1f1815b37b5bc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7998f05be3719f74a8a4c1c558ffafad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fenster1: {fileID: 0}
+  Fenster21: {fileID: 0}
+  Fenster22: {fileID: 0}
+  Fenster23: {fileID: 0}
+  Fenster24: {fileID: 0}
 --- !u!1 &703340370
 GameObject:
   m_ObjectHideFlags: 0
@@ -5470,8 +5485,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2003800707}
-        m_TargetAssemblyTypeName: Script_SceneManager, Assembly-CSharp
-        m_MethodName: pflanzenProfil
+        m_TargetAssemblyTypeName: manageHilfedialog, Assembly-CSharp
+        m_MethodName: setHappySmileyAndReturnToProfile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5528,9 +5543,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2003800702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f624573e6a0bda845b1f1815b37b5bc6, type: 3}
+  m_Script: {fileID: 11500000, guid: 7998f05be3719f74a8a4c1c558ffafad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fenster1: {fileID: 0}
+  Fenster21: {fileID: 0}
+  Fenster22: {fileID: 0}
+  Fenster23: {fileID: 0}
+  Fenster24: {fileID: 0}
 --- !u!1 &2111349614
 GameObject:
   m_ObjectHideFlags: 0
